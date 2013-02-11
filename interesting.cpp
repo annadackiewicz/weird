@@ -17,8 +17,12 @@ int main() {
 	theSet.insert('b');
 	theSet.insert('c');
 
-	vector<set<char> > generated =  generateSubsets(theSet);
+	vector<set<char> > generated = generateSubsets(theSet);
 	cout << generated.size() << endl;
+
+	set<char> empty;
+	vector<set<char> > generated_rec =  generateSubsetsRecursion(theSet, empty);
+	cout << generated_rec.size() << endl;
 
 	return 0;
 }

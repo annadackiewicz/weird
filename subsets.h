@@ -12,3 +12,6 @@ using namespace std;
 // Generating subsets iterating through already generated subsets adding another
 // element from the given set (theSet).
 vector<set<char> > generateSubsets (set<char> theSet);
+
+vector<set<char> > generateSubsetsRecursion(set<char> theSet,
+		set<char> alreadyGenerated);
