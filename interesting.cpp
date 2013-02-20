@@ -5,6 +5,7 @@
 //============================================================================
 
 #include "subsets.h"
+#include "hanoi.h"
 
 #include <iostream>
 
@@ -12,6 +13,7 @@
 int main() {
 	cout << "Interesting implementations" << endl; // prints Interesting implementations
 
+	// Generate Subsets
 	set<char> theSet;
 	theSet.insert('a');
 	theSet.insert('b');
@@ -23,6 +25,12 @@ int main() {
 	set<char> empty;
 	vector<set<char> > generated_rec =  generateSubsetsRecursion(theSet, empty);
 	cout << generated_rec.size() << endl;
+
+	// Hanoi
+	Hanoi han(7, 3);
+	han.printPoles();
+	han.solve(6, 2);
+	han.printPoles();
 
 	return 0;
 }
